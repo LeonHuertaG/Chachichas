@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Chachichas</title>
+    <link rel="stylesheet" href="./login.css">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+
+<body style="margin: 0; font-family: Arial, sans-serif; background: #fffcf7; color: #47312c;">
+
+    <header class="header" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; background: white; border-bottom: 1px solid #f0ddd0;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <i class="fa-solid fa-hotdog" style="font-size: 30px; color: #ad343e;"></i>
+            <div>
+                <h2 style="margin: 0; color: #ad343e;">Chachichas</h2>
+                <small style="color: #957466;">Salchichonería</small>
+            </div>
+        </div>
+
+        <nav class="nav" style="display: flex; gap: 25px;">
+            <a href="../landing/landing.html" style="text-decoration: none; color: #47312c;">Inicio</a>
+            <a href="../landing/landing.html" style="text-decoration: none; color: #ad343e; font-weight: bold;">Volver a la tienda</a>
+        </nav>
+    </header>
+
+    <main class="main" style="min-height: 75vh; display: flex; align-items: center; justify-content: center; padding: 50px 20px;">
+
+        <section class="login-card" style="width: 100%; max-width: 430px; padding: 40px; background: white; border: 1px solid #f0ddd0; border-radius: 20px; box-shadow: 0 8px 30px rgba(71,49,44,0.08);">
+
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="width: 75px; height: 75px; margin: 0 auto 20px; background: #fff0d9; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <i class="fa-solid fa-user" style="font-size: 30px; color: #ad343e;"></i>
+                </div>
+
+                <p style="color: #ad343e; font-size: 12px; font-weight: bold;">BIENVENIDO A CHACHICHAS</p>
+                <h1 style="font-size: 28px; margin: 10px 0;">Iniciar sesión</h1>
+                <p style="color: #80665b; font-size: 14px;">Ingresa tus datos para acceder.</p>
+            </div>
+
+            <form id="loginForm">
+
+                <div style="margin-bottom: 20px;">
+                    <label for="usuario" style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: bold;">Usuario</label>
+                    <input type="text" id="usuario" placeholder="Ejemplo: erick" autocomplete="username" required
+                        style="width: 100%; padding: 14px; border: 1px solid #e8d5c7; border-radius: 8px; font-size: 14px; outline-color: #ad343e;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label for="password" id="passwordLabel" style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: bold;">Contraseña</label>
+
+                    <div style="position: relative;">
+                        <input type="password" id="password" placeholder="Ingresa tu contraseña" autocomplete="current-password" required
+                            style="width: 100%; padding: 14px 45px 14px 14px; border: 1px solid #e8d5c7; border-radius: 8px; font-size: 14px; outline-color: #ad343e;">
+
+                        <button type="button" id="mostrarPassword" aria-label="Mostrar contraseña"
+                            style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); border: none; background: none; color: #957466; cursor: pointer;">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <p id="mensaje" role="status" aria-live="polite"
+                    style="display: none; padding: 12px; font-size: 13px; text-align: center; border-radius: 8px;"></p>
+
+                <button type="submit" id="btnLogin"
+                    style="width: 100%; padding: 14px; background: #ad343e; color: white; border: none; border-radius: 8px; font-size: 15px; font-weight: bold; cursor: pointer;">
+                    <i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión
+                </button>
+            </form>
+
+            <p style="margin-top: 25px; text-align: center; color: #957466; font-size: 13px;">
+                <i class="fa-solid fa-shield-halved"></i>
+                Acceso a Chachichas
+            </p>
+
+        </section>
+    </main>
+
+    <footer class="footer" style="display: flex; justify-content: space-between; padding: 25px 8%; background: #47312c; color: white;">
+        <strong><i class="fa-solid fa-hotdog" style="color: #e8b45c;"></i> Chachichas</strong>
+        <span>© 2026 Salchichonería Chachichas</span>
+    </footer>
+
+    <script type="module" src="./login.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker
+                    .register('/service-worker.js')
+                    .then(() => {
+                        console.log('Service Worker registrado correctamente');
+                    })
+                    .catch((error) => {
+                        console.error('Error al registrar Service Worker:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+@media (max-width: 750px) {
+
+    .header {
+        display: block !important;
+        padding: 15px 5% !important;
+    }
+
+    .nav {
+        margin-top: 15px;
+        gap: 12px !important;
+        font-size: 12px;
+        flex-wrap: wrap;
+    }
+
+    .main {
+        width: 92% !important;
+    }
+
+    .hero {
+        display: block !important;
+        padding: 30px !important;
+    }
+
+    .hero-texto,
+    .hero-icono {
+        width: 100% !important;
+    }
+
+    .hero-titulo {
+        font-size: 36px !important;
+    }
+
+    .hero-icono {
+        margin-top: 25px;
+        font-size: 90px !important;
+    }
+
+    .hero-botones {
+        flex-wrap: wrap;
+    }
+
+    .tarjetas {
+        display: block !important;
+    }
+
+    .tarjeta {
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+
+    .nosotros {
+        display: block !important;
+    }
+
+    .nosotros-icono,
+    .nosotros-texto {
+        width: 100% !important;
+    }
+
+    .footer {
+        display: block !important;
+        text-align: center;
+    }
+
+    .footer span {
+        display: block;
+        margin-top: 10px;
+    }
+}

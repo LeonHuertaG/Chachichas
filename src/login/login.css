@@ -1,0 +1,41 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 750px) {
+
+    .header {
+        display: block !important;
+        padding: 15px 5% !important;
+    }
+
+    .nav {
+        margin-top: 15px;
+        gap: 15px !important;
+        flex-wrap: wrap;
+        font-size: 13px;
+    }
+
+    .main {
+        padding: 30px 15px !important;
+    }
+
+    .login-card {
+        padding: 25px !important;
+    }
+
+    .footer {
+        display: block !important;
+        text-align: center;
+    }
+
+    .footer span {
+        display: block;
+        margin-top: 10px;
+    }
+}
